@@ -22,5 +22,7 @@ export const MenuItem = styled.li`
 
 export const StyledLink = styled(Link)`
     color: white;
+    width: 100%;
+    text-align: center;
     text-decoration: none;
 `

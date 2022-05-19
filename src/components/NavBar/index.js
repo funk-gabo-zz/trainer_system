@@ -6,13 +6,13 @@ export const NavBar = () => {
     <nav>
       <MenuList>
         <MenuItem>
-          <StyledLink to='hola'>Dashboard</StyledLink>
+          <StyledLink to='/'>Dashboard</StyledLink>
         </MenuItem>
         <MenuItem>
-          <StyledLink to='chao'>List</StyledLink>
+          <StyledLink to='/list'>List</StyledLink>
         </MenuItem>
         <MenuItem>
-          <StyledLink to='hola'>MNT</StyledLink>
+          <StyledLink to='/mnt'>MNT</StyledLink>
         </MenuItem>
       </MenuList>
     </nav>
