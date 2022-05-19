@@ -11,6 +11,8 @@ const data = [
 
 export const tvpconfig = {
     data,
+    height: 300,
+    width: 360,
     xField: 'value',
     yField: 'modalidad',
     seriesField: 'modalidad',

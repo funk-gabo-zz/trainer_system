@@ -2,7 +2,9 @@ import React from "react";
 import { Layout } from "./components/Layout";
 import { GlobalStyle } from "./GlobalStyles";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { Dashboard } from "./components/Dashboard";
+import { Dashboard } from "./pages/Dashboard";
+import { List } from "./pages/List";
+import { Mnt } from "./pages/Mnt";
 
 export const App = () => (
   <BrowserRouter>
@@ -11,8 +13,8 @@ export const App = () => (
       <Layout>
         <Routes>
           <Route path='/' element={<Dashboard />} />
-          <Route path="hola" element={<h2>Componente hola</h2>} />
-          <Route path="chao" element={<h5>Componente chao</h5>} />
+          <Route path="list" element={<List />} />
+          <Route path="mnt" element={<Mnt />} />
         </Routes>
       </Layout>
     </React.Fragment>
