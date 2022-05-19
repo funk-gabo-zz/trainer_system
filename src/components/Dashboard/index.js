@@ -1,13 +1,20 @@
 import React from "react";
 import { DonutPie } from "../DonutPie";
-import { Main } from "./styles";
+import { BasicBar } from "../BasicBar";
+import { GraphItem, Main } from "./styles";
 
 export const Dashboard = () => {
   return (
     <Main>
-      <div>
+      <GraphItem>
         <DonutPie donutType="pvt" />
-      </div>
+      </GraphItem>
+      <GraphItem>
+        <DonutPie donutType="sts" />
+      </GraphItem>
+      <GraphItem>
+        <BasicBar BarType="tvp" />
+      </GraphItem>
     </Main>
   );
 };

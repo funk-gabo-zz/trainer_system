@@ -1,23 +1,19 @@
-export const data = [
+const data = [
     {
-      type: 'Dispatcher',
+      type: 'Realizadas',
       value: 27,
     },
     {
-      type: 'Control',
+      type: 'Pendientes',
       value: 25,
     },
     {
-      type: 'Telemetría',
+      type: 'Canceladas',
       value: 18,
-    },
-    {
-      type: 'M/R',
-      value: 15,
     },
   ];
 
-export const pvtconfig = {
+export const stsconfig = {
     appendPadding: 10,
     data,
     angleField: 'value',
@@ -35,10 +31,9 @@ export const pvtconfig = {
     },
     theme: {
         colors10: [
-          '#5c5ceb',
-          '#f55b5b',
-          '#edde5c',
-          '#dd9deb',
+          '#6eef6a',
+          '#8d93b7',
+          '#df9c68',
           '#76523B',
           '#DAD5B5',
           '#0E8E89',
@@ -62,10 +57,10 @@ export const pvtconfig = {
           whiteSpace: 'pre-wrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          fontSize: 15,
+          fontSize: 17,
         },
         content: 
-        `Platafromas`,
+        `Estado`,
       },
     },
   };
