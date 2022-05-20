@@ -6,7 +6,11 @@ export const GraphsContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 300px;
+<<<<<<< HEAD
     margin: 30px 0 0 0;
+=======
+    border: 1px solid green;
+>>>>>>> 642fe2bb142eb073cfab8ec4defc56a937f100e5
 `
 
 export const GraphItem = styled.div`

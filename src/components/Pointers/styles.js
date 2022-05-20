@@ -9,4 +9,3 @@ export const PointerContainer = styled.ul`
     height: 130px;
     margin: 20px 0 0 0;
 `
-
