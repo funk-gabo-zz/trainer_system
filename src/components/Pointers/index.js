@@ -1,12 +1,6 @@
-import React from 'react'
-import { PointerCount } from '../PointerCount';
-import { PointerContainer } from './styles';
-export const Pointers = () => {
-    return (
-        <PointerContainer>
-            <PointerCount />
-            <PointerCount />
-            <PointerCount />
-        </PointerContainer>
-    );
-}
+import React from "react";
+import { PointerContainer } from "./styles";
+
+export const Pointers = ({ children }) => {
+  return <PointerContainer>{children}</PointerContainer>;
+};

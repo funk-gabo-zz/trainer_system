@@ -65,7 +65,7 @@ export const pvtconfig = {
           fontSize: 15,
         },
         content: 
-        `Platafromas`,
+        `Capacitaciones`,
       },
     },
   };

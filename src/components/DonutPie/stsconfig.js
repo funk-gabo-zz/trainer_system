@@ -1,14 +1,18 @@
 const data = [
     {
-      type: 'Realizadas',
+      type: 'Capacitaciones',
       value: 27,
     },
     {
-      type: 'Pendientes',
+      type: 'Soporte',
       value: 25,
     },
     {
-      type: 'Canceladas',
+      type: 'Seguimiento',
+      value: 18,
+    },
+    {
+      type: 'Acompañamiento',
       value: 18,
     },
   ];
@@ -60,7 +64,7 @@ export const stsconfig = {
           fontSize: 17,
         },
         content: 
-        `Estado`,
+        `Tipo Servicio`,
       },
     },
   };

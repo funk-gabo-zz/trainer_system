@@ -5,10 +5,10 @@ export const PointerCount = ({ value, title }) => {
     return (
         <PointerItem>
             <Title>
-                Clientes Capacitados
+                {title}
             </Title>
             <Value>
-                30/25
+                {value}
             </Value>
         </PointerItem>
     );
