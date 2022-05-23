@@ -6,8 +6,7 @@ export const PointerItem = styled.li`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 280px;
-    min-height: 100px;
+    height: 100px;
     background-color: #6d6e93;
     
 `
@@ -19,4 +18,18 @@ export const Title = styled.h4`
 export const Value = styled.h1`
     color: #fff690;
     margin: 0;
+`
+
+export const PointerCountContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 100px;
+    width:100%;
+    max-width: 500px;
+    @media (min-width: 1024px) {
+    width: 30%;
+    max-width: 420px;
+    background-color:red;
+  }
 `

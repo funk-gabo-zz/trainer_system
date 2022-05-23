@@ -3,9 +3,17 @@ const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
 const path = require('path')
 
 module.exports = {
+  entry: {
+    app: './src/index.js',
+ },
   output: {
-    filename: "app.bundle.js",
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
     publicPath: '/',
+  },
+  devServer: {
+    hot: false,
   },
   plugins: [
     new HtmlWebpackPlugin({

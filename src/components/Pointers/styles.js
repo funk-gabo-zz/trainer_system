@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
-export const PointerContainer = styled.ul`
+export const PointersContainer = styled.ul`
     display: flex;
+    gap: 7px;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    height: 130px;
+    min-height: 130px;
     margin: 20px 0 0 0;
 `

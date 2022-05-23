@@ -7,3 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(
     <App />
 )
+
+if (module.hot === 'only') {
+    module.hot.accept();
+  }
