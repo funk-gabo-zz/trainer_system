@@ -1,7 +1,12 @@
 import React from 'react'
+import { Pie } from "@ant-design/plots";
+import { stsconfig } from '../../components/DonutPie/stsconfig'
+import { ExampleDiv } from './style';
 
 export const List = () => {
     return (
-        <h1>Componente List</h1>
+        <ExampleDiv>
+        <Pie {...stsconfig} />
+        </ExampleDiv>
     );
 }

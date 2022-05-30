@@ -6,17 +6,22 @@ import { GraphItem, GraphItemGrid } from "../../components/Graphs/styles";
 import { PointerCount } from "../../components/PointerCount";
 import { Pointers } from "../../components/Pointers";
 import { Main, Section } from "../pagesStyles";
-import 'antd/dist/antd.css';
-import { Input } from 'antd';
+import "antd/dist/antd.css";
+import { Input, Space } from "antd";
+import { BasicTable } from "../../components/BasicTable";
+import { useState } from "react";
+const { Search } = Input;
 
+const onSearch = (value) => alert(value);
 export const Dashboard = () => {
+  const [searchValue, setSearchValue] = useState("");
   return (
     <Main>
       <Section>
         <Pointers>
-          <PointerCount value='24/30' title='Clientes Capacitdos' />
-          <PointerCount value='44/41' title='Capacitaciones Realizadas' />
-          <PointerCount value='13/14' title='Solicitudes Atendidas' />
+          <PointerCount value="24/30" title="Clientes Capacitdos" />
+          <PointerCount value="44/41" title="Capacitaciones Realizadas" />
+          <PointerCount value="13/14" title="Solicitudes Atendidas" />
         </Pointers>
       </Section>
       <Section>
@@ -33,7 +38,20 @@ export const Dashboard = () => {
         </Graphs>
       </Section>
       <Section>
-      <Input />
+        <Space>
+          <Search
+            value={searchValue}
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
+            placeholder="Busca un Usuario"
+            onSearch={onSearch}
+            style={{
+              width: 200,
+            }}
+          />
+        </Space>
+        <BasicTable searchValue={searchValue} tableType="uft" />
       </Section>
     </Main>
   );
