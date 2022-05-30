@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import { uftcolumns, uftdata } from "./uftconfig";
+import { mttcolumns, mttdata } from "./mttconfig";
 
 export const BasicTable = ({ searchValue, tableType }) => {
   switch (tableType) {
@@ -13,8 +14,8 @@ export const BasicTable = ({ searchValue, tableType }) => {
       return (
         <Table columns={uftcolumns} dataSource={uftdataFiltler} size="small" />
       );
-      break;
-
+    case "mtt":
+      return <Table columns={mttcolumns} dataSource={mttdata} size="small" />;
     default:
       break;
   }

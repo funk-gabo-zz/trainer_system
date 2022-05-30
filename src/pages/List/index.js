@@ -1,12 +1,13 @@
-import React from 'react'
-import { Pie } from "@ant-design/plots";
-import { stsconfig } from '../../components/DonutPie/stsconfig'
-import { ExampleDiv } from './style';
+import React from "react";
+import { BasicTable } from "../../components/BasicTable";
+import { Main, Section } from "../pagesStyles";
 
 export const List = () => {
-    return (
-        <ExampleDiv>
-        <Pie {...stsconfig} />
-        </ExampleDiv>
-    );
-}
+  return (
+    <Main>
+      <Section>
+        <BasicTable tableType="mtt" />
+      </Section>
+    </Main>
+  );
+};
