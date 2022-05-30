@@ -8,5 +8,4 @@ export const PointersContainer = styled.ul`
     align-items: center;
     width: 100%;
     min-height: 130px;
-    margin: 20px 0 0 0;
 `

@@ -18,7 +18,6 @@ const data = [
   ];
 
 export const stsconfig = {
-    width: 320,
     appendPadding: 10,
     data,
     angleField: 'value',

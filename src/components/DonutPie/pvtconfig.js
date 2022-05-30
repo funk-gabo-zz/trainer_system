@@ -18,7 +18,6 @@ export const data = [
 ];
 
 export const pvtconfig = {
-  width: 320,
   appendPadding: 10,
   data,
   angleField: 'value',
@@ -33,20 +32,6 @@ export const pvtconfig = {
       textAlign: 'center',
       fontSize: 14,
     },
-  },
-  theme: {
-    colors10: [
-      '#5c5ceb',
-      '#f55b5b',
-      '#edde5c',
-      '#dd9deb',
-      '#76523B',
-      '#DAD5B5',
-      '#0E8E89',
-      '#E19348',
-      '#F383A2',
-      '#247FEA',
-    ]
   },
   interactions: [
     {
@@ -66,7 +51,21 @@ export const pvtconfig = {
         fontSize: 15,
       },
       content:
-        `Capacitaciones`,
+      `Capacitaciones`,
     },
+  },
+  theme: {
+    colors10: [
+      '#5c5ceb',
+      '#f55b5b',
+      '#edde5c',
+      '#dd9deb',
+      '#76523B',
+      '#DAD5B5',
+      '#0E8E89',
+      '#E19348',
+      '#F383A2',
+      '#247FEA',
+    ]
   },
 };
