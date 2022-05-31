@@ -1,4 +1,9 @@
 import { trainings } from "../../../api/trainings";
+import { useAxios } from "../../hooks/useAxios";
+
+const { response, error, loading } = useAxios;
+
+console.log(response);
 
 export const mttcolumns = [
   {
@@ -34,10 +39,6 @@ export const mttcolumns = [
     dataIndex: "nomContacto",
   },
   {
-    title: "Apellido Contacto",
-    dataIndex: "apeContacto",
-  },
-  {
     title: "Email Contacto",
     dataIndex: "mailContacto",
   },
@@ -56,13 +57,12 @@ export const mttdata = trainings.map((training) => {
     cliente: training.client,
     fecha: training.date,
     plataforma: training.platform,
-    presentes: training.assistance,
-    modalidad: training.mode,
     tiempo: training.time,
+    modalidad: training.mode,
+    presentes: training.assistance,
     servicio: training.serviceType,
-    nomContacto: training.contactName,
-    apeContacto: training.contactLastName,
     mailContacto: training.contactEmail,
+    nomContacto: training.contactName,
     telContacto: training.contactPhone,
     estado: training.status,
   };

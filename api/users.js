@@ -2,7 +2,6 @@ export const users = [
   {
     id: 1,
     name: "Gabriel",
-    lastName: "Quevedo",
     phone: 991301160,
     email: "gabriel.quevedo@wisetrack.cl",
     client: "Sotraser",
@@ -10,7 +9,6 @@ export const users = [
   {
     id: 2,
     name: "Diego",
-    lastName: "Balladares",
     phone: 998736768,
     email: "diego.balladares@wisetrack.cl",
     client: "Sotraser",
@@ -18,7 +16,6 @@ export const users = [
   {
     id: 3,
     name: "Mario",
-    lastName: "Calderón",
     phone: 948376743,
     email: "mario.calderón@wisetrack.cl",
     client: "Sotraser",
@@ -26,7 +23,6 @@ export const users = [
   {
     id: 4,
     name: "José",
-    lastName: "Ascencio",
     phone: 985648897,
     email: "jose.ascencio@sotraser.cl",
     client: "Sotraser",
@@ -34,7 +30,6 @@ export const users = [
   {
     id: 5,
     name: "Ricardo",
-    lastName: "Milo",
     phone: 982374877,
     email: "ricardo.milo@sotraser.cl",
     client: "Sotraser",
@@ -42,7 +37,6 @@ export const users = [
   {
     id: 6,
     name: "Milton",
-    lastName: "Correa",
     phone: 913764432,
     email: "milton.correa@sotraser.cl",
     client: "Sotraser",

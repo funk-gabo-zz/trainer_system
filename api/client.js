@@ -14,4 +14,9 @@ export const clients = [
     address: "Super lejos",
     vip: true,
   },
+  {
+    name: "Sorepa",
+    address: "Super lejos",
+    vip: false,
+  },
 ];

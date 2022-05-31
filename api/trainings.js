@@ -8,12 +8,12 @@ export const trainings = [
         mode: 'Telemática', 
         assistance: 3,
         serviceType: 'Capacitación',
-        contactName: 'Ricardo',
-        contactLastName: 'Milo',
         contactEmail: 'ricardo.milo@wisetrack.cl',
+        contactName: 'Ricardo',
         contactPhone: 993405637,
         guest: [{name: 'Juan', lastName: 'Salgado', email: 'correo@co.com', phone: 99988}],
         status: 'Realizado',
         flag: false,
+        observations: 'any',
     }
 ]
