@@ -1,161 +1,171 @@
 {
     "Enero": [
         {
-            "id": "1",
             "client": "Enex",
             "date": "1/5/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "pablo.carrillo.baeza@enex.cl",
             "contactName": "Pablo Carrillo",
             "contactPhone": "(+56) 9 75799866",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "2",
             "client": "Cacciuttolo",
             "date": "1/5/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "controlflota@cacciuttolo.cl",
             "contactName": "Rixion",
             "contactPhone": "(+56) 9 5497 9824",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "3",
             "client": "Cacciuttolo",
             "date": "1/5/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Soporte Plataforma",
             "contactEmail": "controlflota@cacciuttolo.cl",
             "contactName": "Rixion",
             "contactPhone": "(+56) 9 5497 9825",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "4",
             "client": "Mitta",
             "date": "1/6/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "jayala@autorentas.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "5",
             "client": "Mellafe",
             "date": "1/7/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "nestor@trlira.cl",
             "contactName": "Nestor Hincapié",
             "contactPhone": "(+56) 992770339",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "6",
             "client": "Pcfactory",
             "date": "1/10/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "corellanav@pcfactory.cl",
             "contactName": "Cristian Orellana",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "7",
             "client": "Cruz del Sur",
             "date": "1/11/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "3",
             "serviceType": "Capacitación",
             "contactEmail": "xbinder@tcds.cl",
             "contactName": "Ximena Binder",
             "contactPhone": "(+56) 952088183",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "8",
             "client": "Nortrans",
             "date": "1/12/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "monitoreogps@origenchile.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "9",
             "client": "Fariña",
             "date": "1/12/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "miguel.villavicenciof@gmail.com",
             "contactName": "Miguel Villacencio",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "10",
             "client": "Elecnor",
             "date": "1/13/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "oscar.diaz@elecnor.com",
             "contactName": "Oscar Días",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "11",
             "client": "Geoconexión",
             "date": "1/14/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "monitoreo@geoconexion.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "12",
             "client": "Sotraser",
             "date": "1/17/22",
             "platform": "Dispatcher",
@@ -165,214 +175,229 @@
             "contactEmail": "carlos.rojas@sotraser.cl",
             "contactName": "Carlos Rojas",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "13",
             "client": "Cacciuttolo",
             "date": "1/18/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "3",
             "serviceType": "Capacitación",
             "contactEmail": "controlflota@cacciuttolo.cl",
             "contactName": "Rixion",
             "contactPhone": "(+56) 9 5497 9825",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "14",
             "client": "Newtrans",
             "date": "1/19/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "2",
             "serviceType": "Capacitación",
             "contactEmail": "mbarros@newtrans.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "15",
             "client": "Llego",
             "date": "1/20/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "3",
             "serviceType": "Capacitación",
             "contactEmail": "yvergara@llego.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         }
     ],
     "Febrero": [
         {
-            "id": "1",
             "client": "Don Pollo",
             "date": "2/3/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "flobos@transarcocommercial.com",
             "contactName": "Francisco Lobos",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "2",
             "client": "Cial",
             "date": "2/4/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "aldo.uribe@cialalimentos.cl",
             "contactName": "Aldo Uribe",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "3",
             "client": "Nortrans",
             "date": "2/9/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "2",
             "serviceType": "Capacitación",
             "contactEmail": "monitoreogps@origenchile.cl",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "4",
             "client": "Maryun",
             "date": "2/10/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "logisticamaryunpm@gmail.com",
             "contactName": "?",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "5",
             "client": "Enex",
             "date": "2/10/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "pablo.carrillo.baeza@enex.cl",
             "contactName": "Pablo Carrillo",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "6",
             "client": "MIGPS",
             "date": "2/11/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "6",
             "serviceType": "Capacitación",
             "contactEmail": "jeinskateins.montilla@migps.cl",
             "contactName": "Jeinskateins Montilla",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "7",
             "client": "KeyLogistic",
             "date": "2/15/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "jose.villena@keylogistics.cl",
             "contactName": "José Villena",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "8",
             "client": "Maryun",
             "date": "2/15/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "logisticamaryunpm@gmail.com",
             "contactName": "Ramón Paillacar",
             "contactPhone": "(+56) 9 8136 5907",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "9",
             "client": "Walmart",
             "date": "2/16/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "4",
             "serviceType": "Capacitación",
             "contactEmail": "Karen.Flores@walmart.com",
             "contactName": "Karen Flores",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "10",
             "client": "Cruz del Sur",
             "date": "2/23/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "diegowx06@gmail.com",
             "contactName": "Diego Avila",
             "contactPhone": "(+56) 9 40532046",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         }
     ],
     "Marzo": [
         {
-            "id": "1",
             "client": "Don Pollo",
             "date": "3/1/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "flobos@transarcocommercial.com",
             "contactName": "Francisco Lobos",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "2",
             "client": "Maryun",
             "date": "3/2/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
@@ -382,235 +407,250 @@
             "status": "Cancelada"
         },
         {
-            "id": "3",
             "client": "SKC",
             "date": "3/4/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "2",
             "serviceType": "Capacitación",
             "contactEmail": "sebastian.ahumada@skc.cl",
             "contactName": "Sebastián Ahumada",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "4",
             "client": "Interpolar",
             "date": "3/4/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "cristian.gonzalez@interpolar.cl",
             "contactName": "Cristian Gonzalez",
             "contactPhone": "(+56) 9 5772 0960",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "5",
             "client": "Zañartu",
             "date": "3/22/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "aavello@grupozanartu.cl",
             "contactName": "?",
             "contactPhone": "(+56) 9 56422468",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "6",
             "client": "EuroRentacar",
             "date": "3/23/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "2",
             "serviceType": "Capacitación",
             "contactEmail": "jorge.tamayo@migps.cl",
             "contactName": "Jorge Tamayo",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "7",
             "client": "Sotraser",
             "date": "3/30/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Acompañamiento",
             "contactEmail": "jose.ascencio@sotraser.cl",
             "contactName": "José Ascencio",
             "contactPhone": "(+56) 997413655",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         }
     ],
     "Abril": [
         {
-            "id": "1",
             "client": "Sotraser",
             "date": "4/4/02",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "3",
             "serviceType": "Acompañamiento",
             "contactEmail": "jose.ascencio@sotraser.cl",
             "contactName": "José Ascencio",
             "contactPhone": "(+56) 997413655",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "2",
             "client": "Zañartu",
             "date": "4/5/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "asaez@grupozanartu.cl",
             "contactName": "Alan Saez",
             "contactPhone": "(+56) 9 56422468",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "3",
             "client": "Sotraser",
             "date": "4/6/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "jose.vasquez@sotraser.cl",
             "contactName": "José Vasquez",
             "contactPhone": "(+56) 994416417",
-            "status": "Cancelado"
+            "status": "Cancelado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "4",
             "client": "Sotraser",
             "date": "4/6/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "1",
             "serviceType": "Acompañamiento",
             "contactEmail": "jose.ascencio@sotraser.cl",
             "contactName": "José Ascencio",
             "contactPhone": "(+56) 997413655",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "5",
             "client": "Zañartu",
             "date": "4/8/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Soporte Plataforma",
             "contactEmail": "asaez@grupozanartu.cl",
             "contactName": "Alan Saez",
             "contactPhone": "(+56) 9 56422468",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "6",
             "client": "Sotraser",
             "date": "4/19/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "jose.vasquez@sotraser.cl",
             "contactName": "José Vasquez",
             "contactPhone": "(+56) 994416417",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "7",
             "client": "Zañartu",
             "date": "4/19/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "2",
             "serviceType": "Capacitación",
             "contactEmail": "asaez@grupozanartu.cl",
             "contactName": "Alan Saez",
             "contactPhone": "(+56) 9 56422468",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "8",
             "client": "APL",
             "date": "4/20/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "1",
             "serviceType": "Acompañamiento",
             "contactEmail": "carlos_santana@apllogistics.com",
             "contactName": "Carlos Santana",
             "contactPhone": "(+56) 9 73792126",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "9",
             "client": "Anglo/Yanguas",
             "date": "4/22/22",
             "platform": "Dispatcher/Mobileye/Roadefend",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "5",
             "serviceType": "Capacitación",
             "contactEmail": "alejandro.barranco@yanguas.cl",
             "contactName": "Alejandro Barranco",
             "contactPhone": "?",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "10",
             "client": "Interpolar",
             "date": "4/27/22",
             "platform": "Dispatcher",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Soporte Plataforma",
             "contactEmail": "cristian.gonzalez@interpolar.cl",
             "contactName": "Cristian Gonzalez",
             "contactPhone": "(+56) 9 5772 0960",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         },
         {
-            "id": "11",
             "client": "Wetzel",
             "date": "4/28/22",
             "platform": "Control",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "robert.wetzel@transporteswetzel.cl",
             "contactName": "Robert",
             "contactPhone": "(+56) 9 89025187",
-            "status": "Realizado"
+            "status": "Realizado",
+            "tkt": "tkt01",
+            "observations": "any"
         }
     ],
     "Mayo": [
         {
-            "id": "1",
             "client": "Interpolar",
             "date": "5/2/22",
             "platform": "Dispatcher",
@@ -620,11 +660,12 @@
             "serviceType": "Soporte Plataforma",
             "contactEmail": "cristian.gonzalez@interpolar.cl",
             "contactName": "Cristian Gonzalez",
+            "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "2",
             "client": "Anglo/Soldesp",
             "date": "5/4/22",
             "platform": "Dispatcher/Mobileye/Roadefend",
@@ -634,11 +675,12 @@
             "serviceType": "Capacitación",
             "contactEmail": "pcampos@soldesp.com",
             "contactName": "Patricio Campos",
+            "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "3",
             "client": "Anglo/Gac",
             "date": "5/4/22",
             "platform": "Dispatcher/Mobileye/Roadefend",
@@ -648,39 +690,41 @@
             "serviceType": "Capacitación",
             "contactEmail": "chuerta@gac.cl",
             "contactName": "Carolona Huerta",
+            "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "4",
             "client": "Sustrans/Anglo",
             "date": "5/5/22",
             "platform": "Dispatcher/Mobileye/Roadefend",
-            "time": "?",
+            "time": "0",
             "mode": "Telemática",
             "assistance": "1",
             "serviceType": "Capacitación",
             "contactEmail": "jgonzalez@suatrans.cl",
             "contactName": "Javier Gonzalez",
+            "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "5",
             "client": "Wisetrack",
             "date": "5/5/22",
             "platform": "Mobicua",
-            "time": "?",
+            "time": "0",
             "mode": "Presencial",
             "assistance": "1",
             "serviceType": "Formación",
             "contactEmail": "hector.fajardo@wisetrack.cl",
             "contactName": "Hector Fajardo",
+            "contactPhone": "?",
             "status": "Pendiente",
             "tkt": "?"
         },
         {
-            "id": "6",
             "client": "Sorepa",
             "date": "5/5/22",
             "platform": "Dispatcher",
@@ -696,7 +740,6 @@
             "observations": "La geocerca 85036204 debe entregar entradas y salidas, si no lo hace hay que levantar un tkt a desarrollo"
         },
         {
-            "id": "7",
             "client": "APL",
             "date": "5/5/22",
             "platform": "Dispatcher",
@@ -708,10 +751,10 @@
             "contactName": "Carlos Santana",
             "contactPhone": "(+56) 9 5 207 9397",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "8",
             "client": "CVV",
             "date": "5/6/22",
             "platform": "Control",
@@ -727,7 +770,6 @@
             "observations": "Se solicita setear los códigos de Móvil en lugar de las patentes para este cliente, se envió un excel con las espacificaciones"
         },
         {
-            "id": "9",
             "client": "Sorepa",
             "date": "5/6/22",
             "platform": "Dispatcher",
@@ -743,7 +785,6 @@
             "observations": "Se levantan problemas con geocercas, se requiere alertas de velocidad y entradas y salidas"
         },
         {
-            "id": "10",
             "client": "Enex",
             "date": "5/6/22",
             "platform": "Control",
@@ -759,7 +800,6 @@
             "observations": "Se solicita habilitar Grupo 4 de Control, hoy tiene el cálculo de Batería, se requiere editable"
         },
         {
-            "id": "11",
             "client": "Brinks",
             "date": "5/9/22",
             "platform": "Dispatcher",
@@ -771,10 +811,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-89554-H1C9"
         },
         {
-            "id": "12",
             "client": "PSI Chile",
             "date": "5/10/22",
             "platform": "Control",
@@ -786,10 +826,10 @@
             "contactName": "Diego Venegas",
             "contactPhone": "(+56) 9 4142 6032",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-89729-G6R2"
         },
         {
-            "id": "13",
             "client": "Wisetrack",
             "date": "5/11/22",
             "platform": "Telemetría",
@@ -801,10 +841,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-89787-S4R3"
         },
         {
-            "id": "14",
             "client": "APL",
             "date": "5/11/22",
             "platform": "Dispatcher",
@@ -816,10 +856,10 @@
             "contactName": "Patricia Gallardo",
             "contactPhone": "(+56) 9 73792126",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-89807-Y4Y3"
         },
         {
-            "id": "15",
             "client": "Brinks",
             "date": "5/13/22",
             "platform": "Dispatcher",
@@ -831,10 +871,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-90138-K7X0"
         },
         {
-            "id": "16",
             "client": "Viggo",
             "date": "5/20/22",
             "platform": "Dispatcher/Control",
@@ -846,10 +886,10 @@
             "contactName": "Jonathan Gonzalez",
             "contactPhone": "(+56) 9 8808 2627",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-90989-R3W1"
         },
         {
-            "id": "17",
             "client": "Brinks",
             "date": "5/23/22",
             "platform": "Dispatcher",
@@ -861,10 +901,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91100-D0S1"
         },
         {
-            "id": "18",
             "client": "Tandem",
             "date": "5/23/22",
             "platform": "Movileye/Roadefend",
@@ -876,10 +916,10 @@
             "contactName": "Diego Pasmino",
             "contactPhone": "?",
             "status": "Reasignado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "19",
             "client": "KYJ",
             "date": "5/23/22",
             "platform": "Mobileye/Roadefend/Control",
@@ -891,10 +931,10 @@
             "contactName": "Jorge Roco Cruz",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "?"
         },
         {
-            "id": "20",
             "client": "Sotraser",
             "date": "5/24/22",
             "platform": "Roadefend",
@@ -906,10 +946,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91429-C2J5"
         },
         {
-            "id": "21",
             "client": "Sotraser",
             "date": "5/24/22",
             "platform": "Roadefend",
@@ -921,10 +961,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91436-B2C5"
         },
         {
-            "id": "22",
             "client": "Fcab",
             "date": "5/25/22",
             "platform": "Dispatcher",
@@ -936,10 +976,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91689-G6R4"
         },
         {
-            "id": "23",
             "client": "Sotraser",
             "date": "5/25/22",
             "platform": "Roadefend",
@@ -951,10 +991,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91441-G4N0"
         },
         {
-            "id": "24",
             "client": "Sotraser",
             "date": "5/25/22",
             "platform": "Roadefend",
@@ -966,10 +1006,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91617-H5V8"
         },
         {
-            "id": "25",
             "client": "Tandem",
             "date": "5/26/22",
             "platform": "Control",
@@ -981,10 +1021,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91615-K4F8"
         },
         {
-            "id": "26",
             "client": "Sotraser",
             "date": "5/26/22",
             "platform": "Roadefend",
@@ -996,10 +1036,10 @@
             "contactName": "?",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91727-D0X8"
         },
         {
-            "id": "27",
             "client": "Mellafe",
             "date": "5/31/22",
             "platform": "Dispatcher",
@@ -1011,10 +1051,10 @@
             "contactName": "Silvia Varela",
             "contactPhone": "?",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91922-N4S2"
         },
         {
-            "id": "28",
             "client": "Maryun",
             "date": "5/31/22",
             "platform": "Dispatcher",
@@ -1026,6 +1066,7 @@
             "contactName": "Ramón Paillacar",
             "contactPhone": "9 8136 5907",
             "status": "Realizado",
+            "observations": "any",
             "tkt": "TKT-91927-D9C5"
         }
     ]

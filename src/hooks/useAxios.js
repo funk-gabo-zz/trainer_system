@@ -1,31 +1,15 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
 
-//axios.defaults.baseURL = 'http://localhost:3000/';
+const useAxios = (url) => {
+  const [data, setData] = useState(null);
 
-export const useAxios = () => {
-    const [response, setResponse] = useState(null);
-    const [error, setError] = useState('');
-    const [loading, setloading] = useState(true);
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, [url]);
 
-    const fetchData = () => {
-        axios
-            .get('http://localhost:3000/api/trainings')
-            .then((res) => {
-                setResponse(res.data);
-            })
-            .catch((err) => {
-                setError(err);
-            })
-            .finally(() => {
-                setloading(false);
-            });
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    // custom hook returns value
-    return { response, error, loading };
+  return [data];
 };
+
+export default useAxios;
