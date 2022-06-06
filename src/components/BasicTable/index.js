@@ -18,16 +18,21 @@ export const BasicTable = ({ searchValue, tableType }) => {
       );
     case "mtt":
       const [trainingsData, setTrainingsData] = useState([]);
+      const [loading, setLoading] = useState(true);
       useEffect(() => {
-        axios
-          .get("http://localhost:3001/training")
-          .then(function (response) {
-            setTrainingsData(response.data);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      }, []);
+        if (loading) {
+          axios
+            .get("http://localhost:3001/training")
+            .then(function (response) {
+              setTrainingsData(response.data);
+              setLoading(false)
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      }
+        , []);
       const mttdata2 = trainingsData.map((training) => {
         const dateMod = training.date.slice(-24, 10)
         return {
@@ -47,7 +52,7 @@ export const BasicTable = ({ searchValue, tableType }) => {
           observaciones: training.observations
         };
       });
-      return <Table columns={mttcolumns} dataSource={mttdata2} size="small" />;
+      return <Table columns={mttcolumns} loading={loading} dataSource={mttdata2} size="small" />;
     default:
       break;
   }
