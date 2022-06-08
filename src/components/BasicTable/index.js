@@ -1,11 +1,11 @@
 import React from "react";
 import { Table } from "antd";
 import { uftcolumns, uftdata } from "./uftconfig";
-import { mttcolumns, mttdata } from "./mttconfig";
+import { mttcolumns } from "./mttconfig";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const BasicTable = ({ searchValue, tableType }) => {
+export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
   switch (tableType) {
     case "uft":
       const uftdataFiltler = uftdata.filter((data) => {
@@ -18,23 +18,21 @@ export const BasicTable = ({ searchValue, tableType }) => {
       );
     case "mtt":
       const [trainingsData, setTrainingsData] = useState([]);
-      const [loading, setLoading] = useState(true);
       useEffect(() => {
         if (loading) {
           axios
             .get("http://localhost:3001/training")
             .then(function (response) {
               setTrainingsData(response.data);
-              setLoading(false)
+              setLoading(false);
             })
             .catch(function (error) {
               console.log(error);
             });
         }
-      }
-        , []);
-      const mttdata2 = trainingsData.map((training) => {
-        const dateMod = training.date.slice(-24, 10)
+      }, [loading]);
+      const mttdata = trainingsData.map((training) => {
+        const dateMod = training.date.slice(-24, 10);
         return {
           key: training._id,
           cliente: training.client,
@@ -49,10 +47,17 @@ export const BasicTable = ({ searchValue, tableType }) => {
           telContacto: training.contactPhone,
           estado: training.status,
           tkt: training.tkt,
-          observaciones: training.observations
+          observaciones: training.observations,
         };
       });
-      return <Table columns={mttcolumns} loading={loading} dataSource={mttdata2} size="small" />;
+      return (
+        <Table
+          columns={mttcolumns}
+          loading={loading}
+          dataSource={mttdata}
+          size="small"
+        />
+      );
     default:
       break;
   }
