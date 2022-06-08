@@ -1,25 +1,5 @@
-export const data = [
-  {
-    type: 'Dispatcher',
-    value: 27,
-  },
-  {
-    type: 'Control',
-    value: 25,
-  },
-  {
-    type: 'Telemetría',
-    value: 18,
-  },
-  {
-    type: 'M/R',
-    value: 15,
-  },
-];
-
 export const pvtconfig = {
   appendPadding: 10,
-  data,
   angleField: 'value',
   colorField: 'type',
   radius: 1,

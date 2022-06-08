@@ -1,25 +1,5 @@
-const data = [
-    {
-      type: 'Capacitaciones',
-      value: 27,
-    },
-    {
-      type: 'Soporte',
-      value: 25,
-    },
-    {
-      type: 'Seguimiento',
-      value: 18,
-    },
-    {
-      type: 'Acompañamiento',
-      value: 18,
-    },
-  ];
-
 export const stsconfig = {
     appendPadding: 10,
-    data,
     angleField: 'value',
     colorField: 'type',
     radius: 1,
