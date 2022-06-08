@@ -8,13 +8,29 @@ import axios from "axios";
 export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
   switch (tableType) {
     case "uft":
+    const [userData, setUserData] = useState([])
+    useEffect(() => {
+      if (loading) {
+        axios
+          .get("http://localhost:3001/user")
+          .then(function (response) {
+            setUserData(response.data);
+            console.log(userData)
+            setLoading(false);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    }, [loading]);
+
       const uftdataFiltler = uftdata.filter((data) => {
         const nameDataUpper = data.nombre.toUpperCase();
         const searchValueUpper = searchValue.toUpperCase();
         return nameDataUpper.includes(searchValueUpper);
       });
       return (
-        <Table columns={uftcolumns} dataSource={uftdataFiltler} size="small" />
+        <Table columns={uftcolumns} dataSource={userData} size="small" />
       );
     case "mtt":
       const [trainingsData, setTrainingsData] = useState([]);
@@ -58,6 +74,7 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
           size="small"
         />
       );
+      
     default:
       break;
   }

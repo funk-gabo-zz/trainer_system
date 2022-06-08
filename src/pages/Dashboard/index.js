@@ -7,18 +7,27 @@ import { PointerCount } from "../../components/PointerCount";
 import { Pointers } from "../../components/Pointers";
 import { Main, Section } from "../pagesStyles";
 import "antd/dist/antd.css";
-import { Input, Space } from "antd";
+import { Button, Input, Space } from "antd";
 import { BasicTable } from "../../components/BasicTable";
 import axios from "axios";
-import { Zoom } from "@antv/l7-component";
+import { FormDrawer } from "../../components/FormDrawer";
 const { Search } = Input;
 
-const onSearch = (value) => alert(value);
 export const Dashboard = () => {
   const [searchValue, setSearchValue] = useState("");
   const [boardLoading, setBoardLoading] = useState(true);
   const [trainingData, setTrainingData] = useState([]);
   const [clientData, setClientData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   useEffect(() => {
     if (boardLoading)
       axios
@@ -97,14 +106,15 @@ export const Dashboard = () => {
               setSearchValue(e.target.value);
             }}
             placeholder="Busca un Usuario"
-            onSearch={onSearch}
             style={{
               width: 200,
             }}
           />
+        <Button type="primary" onClick={showDrawer}>Nuevo Usuario</Button>
         </Space>
-        <BasicTable searchValue={searchValue} tableType="uft" />
+        <BasicTable loading={loading} setLoading={setLoading} searchValue={searchValue} tableType="uft" />
       </Section>
+      <FormDrawer drawerTitle='Nuevo Usuario' drawerType='nuf' visible={visible} setLoading={setLoading} onClose={onClose} />
     </Main>
   );
 };

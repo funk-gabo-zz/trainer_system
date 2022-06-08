@@ -5,8 +5,8 @@ import { Button } from "antd";
 import { FormDrawer } from "../../components/FormDrawer";
 
 export const List = () => {
-  const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
   };
@@ -20,7 +20,7 @@ export const List = () => {
         <Button onClick={showDrawer} type="primary">
           Nueva Capacitación
         </Button>
-        <FormDrawer visible={visible} setLoading={setLoading} onClose={onClose} />
+        <FormDrawer drawerTitle='Nueva Capacitación' drawerType='ntf' visible={visible} setLoading={setLoading} onClose={onClose} />
         <BasicTable loading={loading} setLoading={setLoading} tableType="mtt" />
       </Section>
     </Main>

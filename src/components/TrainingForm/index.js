@@ -42,9 +42,6 @@ export const TrainingForm = ({ setLoading }) => {
   const onSearch = (value) => {
     console.log("search:", value);
   };
-  const onOk = (value) => {
-    console.log("onOk: ", value);
-  };
   useEffect(() => {
     axios
       .get("http://localhost:3001/client")
