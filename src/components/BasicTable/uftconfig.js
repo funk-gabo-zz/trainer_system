@@ -1,12 +1,7 @@
-import { users } from "../../../api/users";
 export const uftcolumns = [
   {
     title: "Nombre",
-    dataIndex: "nombre",
-  },
-  {
-    title: "Apellido",
-    dataIndex: "apellido",
+    dataIndex: "name",
   },
   {
     title: "Email",
@@ -14,20 +9,10 @@ export const uftcolumns = [
   },
   {
     title: "Telefono",
-    dataIndex: "telefono",
+    dataIndex: "phone",
   },
   {
     title: "Empresa",
-    dataIndex: "empresa",
+    dataIndex: "client",
   },
 ];
-export const uftdata = users.map((user) => {
-  return {
-    key: user.id,
-    nombre: user.name,
-    apellido: user.lastName,
-    email: user.email,
-    telefono: `(+56) 9 ${user.phone}`,
-    empresa: user.client
-  };
-});

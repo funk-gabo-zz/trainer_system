@@ -2,17 +2,18 @@ import React, { useRef, useState, useEffect } from "react";
 import { Button, Form, Input, Select } from "antd";
 import axios from "axios";
 
-export const UserForm = () => {
+export const UserForm = ({ setLoading }) => {
   const [clientsData, setClientsData] = useState([]);
   const formRef = useRef(null);
 
   const onFinish = (values) => {
     axios({
-        method: "post",
-        url: "http://localhost:3001/user",
-        data: values,
-      });
-      formRef.current.resetFields();
+      method: "post",
+      url: "http://localhost:3001/user",
+      data: values,
+    });
+    setLoading(true);
+    formRef.current.resetFields();
   };
 
   const onFinishFailed = (errorInfo) => {

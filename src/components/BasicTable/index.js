@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "antd";
-import { uftcolumns, uftdata } from "./uftconfig";
+import { uftcolumns } from "./uftconfig";
 import { mttcolumns } from "./mttconfig";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -8,30 +8,35 @@ import axios from "axios";
 export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
   switch (tableType) {
     case "uft":
-    const [userData, setUserData] = useState([])
-    useEffect(() => {
-      if (loading) {
-        axios
-          .get("http://localhost:3001/user")
-          .then(function (response) {
-            setUserData(response.data);
-            console.log(userData)
-            setLoading(false);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      }
-    }, [loading]);
-
-      const uftdataFiltler = uftdata.filter((data) => {
-        const nameDataUpper = data.nombre.toUpperCase();
+      const [userData, setUserData] = useState([]);
+      useEffect(() => {
+        if (loading) {
+          axios
+            .get("http://localhost:3001/user")
+            .then(function (response) {
+              setUserData(response.data);
+              setLoading(false);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      }, [loading]);
+      const uftData = userData.map((user) => {
+        return {
+          key: user._id,
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          client: user.client,
+        };
+      });
+      const uftdataFiltler = uftData.filter((data) => {
+        const nameDataUpper = data.name.toUpperCase();
         const searchValueUpper = searchValue.toUpperCase();
         return nameDataUpper.includes(searchValueUpper);
       });
-      return (
-        <Table columns={uftcolumns} dataSource={userData} size="small" />
-      );
+      return <Table loading={loading} columns={uftcolumns} dataSource={uftdataFiltler} size="small" />;
     case "mtt":
       const [trainingsData, setTrainingsData] = useState([]);
       useEffect(() => {
@@ -74,7 +79,7 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
           size="small"
         />
       );
-      
+
     default:
       break;
   }
