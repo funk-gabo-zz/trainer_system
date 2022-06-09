@@ -27,7 +27,7 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
           key: user._id,
           name: user.name,
           email: user.email,
-          phone: user.phone,
+          phone: `(+56) ${user.phone}`,
           client: user.client,
         };
       });
@@ -59,13 +59,11 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
           cliente: training.client,
           fecha: dateMod,
           plataforma: training.platform,
-          tiempo: training.time,
           modalidad: training.mode,
-          presentes: training.assistance,
           servicio: training.serviceType,
           mailContacto: training.contactEmail,
           nomContacto: training.contactName,
-          telContacto: training.contactPhone,
+          telContacto: `(+56) ${training.contactPhone}`,
           estado: training.status,
           tkt: training.tkt,
           observaciones: training.observations,

@@ -12,16 +12,8 @@ export const mttcolumns = [
     dataIndex: "plataforma",
   },
   {
-    title: "Presentes",
-    dataIndex: "presentes",
-  },
-  {
     title: "Modalidad",
     dataIndex: "modalidad",
-  },
-  {
-    title: "Tiempo",
-    dataIndex: "tiempo",
   },
   {
     title: "Servicio",
