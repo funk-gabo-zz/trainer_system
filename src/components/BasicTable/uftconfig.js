@@ -2,6 +2,7 @@ export const uftcolumns = [
   {
     title: "Nombre",
     dataIndex: "name",
+    fixed: 'left'
   },
   {
     title: "Email",

@@ -36,7 +36,17 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
         const searchValueUpper = searchValue.toUpperCase();
         return nameDataUpper.includes(searchValueUpper);
       });
-      return <Table loading={loading} columns={uftcolumns} dataSource={uftdataFiltler} size="small" />;
+      return (
+        <Table
+          scroll={{
+            x: 420,
+          }}
+          loading={loading}
+          columns={uftcolumns}
+          dataSource={uftdataFiltler}
+          size="small"
+        />
+      );
     case "mtt":
       const [trainingsData, setTrainingsData] = useState([]);
       useEffect(() => {
@@ -75,6 +85,9 @@ export const BasicTable = ({ loading, setLoading, searchValue, tableType }) => {
           loading={loading}
           dataSource={mttdata}
           size="small"
+          scroll={{
+            x: 1300,
+          }}
         />
       );
 

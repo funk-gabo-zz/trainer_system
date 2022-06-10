@@ -2,6 +2,7 @@ export const mttcolumns = [
   {
     title: "Cliente",
     dataIndex: "cliente",
+    fixed: 'left',
   },
   {
     title: "Fecha",
