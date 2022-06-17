@@ -7,20 +7,26 @@ import { PointerCount } from "../../components/PointerCount";
 import { Pointers } from "../../components/Pointers";
 import { Main, Section } from "../pagesStyles";
 import "antd/dist/antd.css";
-import { Button, Input, Space } from "antd";
+import { Button, Input, Space, Form, DatePicker } from "antd";
 import { BasicTable } from "../../components/BasicTable";
 import axios from "axios";
 import { FormDrawer } from "../../components/FormDrawer";
 const { Search } = Input;
+const { RangePicker } = DatePicker;
 
 export const Dashboard = () => {
   const [searchValue, setSearchValue] = useState("");
   const [boardLoading, setBoardLoading] = useState(true);
-  const [trainingData, setTrainingData] = useState([]);
+  const [trainingsData, setTrainingsData] = useState([]);
   const [clientData, setClientData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [period, setPeriod] = useState([]);
   const [visible, setVisible] = useState(false);
+
+  const makeFilter = (dates) => {
+    setPeriod(dates);
+  };
+
   const showDrawer = () => {
     setVisible(true);
   };
@@ -33,7 +39,7 @@ export const Dashboard = () => {
       axios
         .get("http://localhost:3001/training")
         .then((response) => {
-          setTrainingData(response.data);
+          setTrainingsData(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -48,27 +54,87 @@ export const Dashboard = () => {
         console.log(error);
       });
   }, []);
-  const clientsTrained = [...new Set(trainingData.map((x) => x.client))].length;
-  const totalCleints = clientData.length
-  const countTotalTraining = trainingData.length
-  const executedTraining = trainingData.filter(train => train.status === 'Realizado').length
-  const countDispatcher = trainingData.filter(train=> train.platform === 'Dispatcher').length
-  const countControl = trainingData.filter(train=> train.platform === 'Control').length
-  const countTelemetria = trainingData.filter(train=> train.platform === 'Telemetría').length
-  const countMobicua = trainingData.filter(train=> train.platform === 'Mobicua').length
-  const countCapacita = trainingData.filter(train=> train.serviceType === 'Capacitación').length
-  const countSoporte = trainingData.filter(train=> train.serviceType === 'Soporte de Plataformas').length
-  const countSeguimiento = trainingData.filter(train=> train.serviceType === 'Seguimiento').length
-  const countAcompañamiento = trainingData.filter(train=> train.serviceType === 'Acompañamiento').length
-  const countPresencial = trainingData.filter(train=> train.mode === 'Presencial').length
-  const countTelematica = trainingData.filter(train=> train.mode === 'Telemática').length
+
+  const thisDate = new Date();
+
+  const dat = period.date || [thisDate, thisDate];
+  const startDate = new Date(dat[0]);
+  const endDate = new Date(dat[1]);
+
+  let filteredTraining = [];
+
+  const parseStart = startDate.toString();
+  const parseEnd = endDate.toString();
+  if (parseStart === parseEnd) {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
+      return date.getMonth() === startDate.getMonth();
+    });
+  } else {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
+
+      return date >= startDate && date <= endDate;
+    });
+  }
+
+  const clientsTrained = [...new Set(filteredTraining.map((x) => x.client))].length;
+  const totalCleints = clientData.length;
+  const countTotalTraining = filteredTraining.length;
+  const executedTraining = filteredTraining.filter(
+    (train) => train.status === "Realizado"
+  ).length;
+  const countDispatcher = filteredTraining.filter(
+    (train) => train.platform === "Dispatcher"
+  ).length;
+  const countControl = filteredTraining.filter(
+    (train) => train.platform === "Control"
+  ).length;
+  const countTelemetria = filteredTraining.filter(
+    (train) => train.platform === "Telemetría"
+  ).length;
+  const countMobicua = filteredTraining.filter(
+    (train) => train.platform === "Mobicua"
+  ).length;
+  const countCapacita = filteredTraining.filter(
+    (train) => train.serviceType === "Capacitación"
+  ).length;
+  const countSoporte = filteredTraining.filter(
+    (train) => train.serviceType === "Soporte de Plataformas"
+  ).length;
+  const countSeguimiento = filteredTraining.filter(
+    (train) => train.serviceType === "Seguimiento"
+  ).length;
+  const countAcompañamiento = filteredTraining.filter(
+    (train) => train.serviceType === "Acompañamiento"
+  ).length;
+  const countPresencial = filteredTraining.filter(
+    (train) => train.mode === "Presencial"
+  ).length;
+  const countTelematica = filteredTraining.filter(
+    (train) => train.mode === "Telemática"
+  ).length;
 
   return (
     <Main>
       <Section>
+        <Form onFinish={makeFilter} layout="inline">
+          <Form.Item name="date" noStyle>
+            <RangePicker picker="month"/>
+          </Form.Item>
+          <Form.Item>
+            <Button htmlType="submit">🔍</Button>
+          </Form.Item>
+        </Form>
         <Pointers>
-          <PointerCount value={`${clientsTrained}/${totalCleints}`} title="Clientes Capacitdos" />
-          <PointerCount value={`${countTotalTraining}/${executedTraining}`} title="Capacitaciones Realizadas" />
+          <PointerCount
+            value={`${clientsTrained}/${totalCleints}`}
+            title="Clientes Capacitdos"
+          />
+          <PointerCount
+            value={`${executedTraining}/${countTotalTraining}`}
+            title="Capacitaciones Realizadas"
+          />
           <PointerCount value="0/0" title="Solicitudes Atendidas" />
         </Pointers>
       </Section>
@@ -76,25 +142,28 @@ export const Dashboard = () => {
         <Graphs>
           <GraphItem>
             <DonutPie
-            countDispatcher={countDispatcher}
-            countControl={countControl}
-            countTelemetria={countTelemetria}
-            countMobicua={countMobicua}
-            donutType="pvt" />
+              countDispatcher={countDispatcher}
+              countControl={countControl}
+              countTelemetria={countTelemetria}
+              countMobicua={countMobicua}
+              donutType="pvt"
+            />
           </GraphItem>
           <GraphItem>
-            <DonutPie donutType="sts"
-            countCapacita={countCapacita}
-            countSoporte={countSoporte}
-            countSeguimiento={countSeguimiento}
-            countAcompañamiento={countAcompañamiento}
+            <DonutPie
+              donutType="sts"
+              countCapacita={countCapacita}
+              countSoporte={countSoporte}
+              countSeguimiento={countSeguimiento}
+              countAcompañamiento={countAcompañamiento}
             />
           </GraphItem>
           <GraphItemGrid>
             <BasicBar
-            countPresencial={countPresencial}
-            countTelematica={countTelematica}
-            BarType="tvp" />
+              countPresencial={countPresencial}
+              countTelematica={countTelematica}
+              BarType="tvp"
+            />
           </GraphItemGrid>
         </Graphs>
       </Section>
@@ -110,11 +179,24 @@ export const Dashboard = () => {
               width: 200,
             }}
           />
-        <Button type="primary" onClick={showDrawer}>Nuevo Usuario</Button>
+          <Button type="primary" onClick={showDrawer}>
+            Nuevo Usuario
+          </Button>
         </Space>
-        <BasicTable loading={loading} setLoading={setLoading} searchValue={searchValue} tableType="uft" />
+        <BasicTable
+          loading={loading}
+          setLoading={setLoading}
+          searchValue={searchValue}
+          tableType="uft"
+        />
       </Section>
-      <FormDrawer drawerTitle='Nuevo Usuario' drawerType='nuf' visible={visible} setLoading={setLoading} onClose={onClose} />
+      <FormDrawer
+        drawerTitle="Nuevo Usuario"
+        drawerType="nuf"
+        visible={visible}
+        setLoading={setLoading}
+        onClose={onClose}
+      />
     </Main>
   );
 };

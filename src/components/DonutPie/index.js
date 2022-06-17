@@ -19,19 +19,19 @@ export const DonutPie = ({
       const pvtData = [
         {
           type: "Dispatcher",
-          value: countDispatcher,
+          value: countDispatcher === 0 ? '' : countDispatcher,
         },
         {
           type: "Control",
-          value: countControl,
+          value: countControl === 0 ? '' : countControl,
         },
         {
           type: "Telemetría",
-          value: countTelemetria,
+          value: countTelemetria === 0 ? '' : countTelemetria,
         },
         {
           type: "Mobicua",
-          value: countMobicua,
+          value: countMobicua === 0 ? '' : countMobicua,
         },
       ];
       const pvtconfigOn = {
@@ -43,19 +43,19 @@ export const DonutPie = ({
       const stsData = [
         {
           type: "Capacitaciones",
-          value: countCapacita,
+          value: countCapacita === 0 ? '' : countCapacita,
         },
         {
           type: "Soporte",
-          value: countSoporte,
+          value: countSoporte === 0 ? '' : countSoporte,
         },
         {
           type: "Seguimiento",
-          value: countSeguimiento,
+          value: countSeguimiento === 0 ? '' : countSeguimiento,
         },
         {
           type: "Acompañamiento",
-          value: countAcompañamiento,
+          value: countAcompañamiento === 0 ? '' : countAcompañamiento,
         },
       ];
       const stsconfigOn = {
