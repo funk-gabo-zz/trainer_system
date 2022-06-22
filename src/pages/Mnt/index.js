@@ -11,7 +11,7 @@ export const Mnt = () => {
   const [clientData, setClientData] = useState([]);
   useEffect(()=> {
     axios
-      .get("http://localhost:3001/client")
+      .get("https://calm-everglades-62292.herokuapp.com/client")
       .then((response) => {
         setClientData(response.data);
         setBoardLoading(false);

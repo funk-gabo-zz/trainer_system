@@ -27,7 +27,7 @@ export const TrainingForm = ({ setLoading }) => {
     };
     axios({
       method: "post",
-      url: "http://localhost:3001/training",
+      url: "https://calm-everglades-62292.herokuapp.com/training",
       data: newTraining,
     });
     setLoading(true);
@@ -44,7 +44,7 @@ export const TrainingForm = ({ setLoading }) => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:3001/client")
+      .get("https://calm-everglades-62292.herokuapp.com/client")
       .then(function (response) {
         setClientsData(response.data);
       })
@@ -52,7 +52,7 @@ export const TrainingForm = ({ setLoading }) => {
         console.log(error);
       });
     axios
-      .get("http://localhost:3001/platform")
+      .get("https://calm-everglades-62292.herokuapp.com/platform")
       .then(function (response) {
         setPlatformsData(response.data);
       })
@@ -60,7 +60,7 @@ export const TrainingForm = ({ setLoading }) => {
         console.log(error);
       });
     axios
-      .get("http://localhost:3001/service")
+      .get("https://calm-everglades-62292.herokuapp.com/service")
       .then(function (response) {
         setServicesData(response.data);
       })
@@ -68,7 +68,7 @@ export const TrainingForm = ({ setLoading }) => {
         console.log(error);
       });
     axios
-      .get("http://localhost:3001/mode")
+      .get("https://calm-everglades-62292.herokuapp.com/mode")
       .then(function (response) {
         setModesData(response.data);
       })
@@ -76,7 +76,7 @@ export const TrainingForm = ({ setLoading }) => {
         console.log(error);
       });
     axios
-      .get("http://localhost:3001/status")
+      .get("https://calm-everglades-62292.herokuapp.com/status")
       .then(function (response) {
         setStatusData(response.data);
       })

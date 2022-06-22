@@ -36,7 +36,7 @@ export const BasicTable = ({
       useEffect(() => {
         if (loading) {
           axios
-            .get("http://localhost:3001/user")
+            .get("https://calm-everglades-62292.herokuapp.com/user")
             .then(function (response) {
               setUserData(response.data);
               setLoading(false);
@@ -85,7 +85,7 @@ export const BasicTable = ({
         console.log(id);
         const newStatus = state === "Realizado" ? "Pendiente" : "Realizado";
         axios
-          .patch(`http://localhost:3001/training/${id}`, {
+          .patch(`https://calm-everglades-62292.herokuapp.com/training/${id}`, {
             id,
             status: newStatus,
           })
@@ -183,7 +183,7 @@ export const BasicTable = ({
       useEffect(() => {
         if (loading) {
           axios
-            .get("http://localhost:3001/training")
+            .get("https://calm-everglades-62292.herokuapp.com/training")
             .then(function (response) {
               setTrainingsData(response.data);
               setLoading(false);

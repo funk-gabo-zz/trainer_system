@@ -9,7 +9,7 @@ export const UserForm = ({ setLoading }) => {
   const onFinish = (values) => {
     axios({
       method: "post",
-      url: "http://localhost:3001/user",
+      url: "https://calm-everglades-62292.herokuapp.com/user",
       data: values,
     });
     setLoading(true);
@@ -27,7 +27,7 @@ export const UserForm = ({ setLoading }) => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:3001/client")
+      .get("https://calm-everglades-62292.herokuapp.com/client")
       .then(function (response) {
         setClientsData(response.data);
       })

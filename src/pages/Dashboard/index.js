@@ -39,7 +39,7 @@ export const Dashboard = () => {
   useEffect(() => {
     if (boardLoading)
       axios
-        .get("http://localhost:3001/training")
+        .get("https://calm-everglades-62292.herokuapp.com/training")
         .then((response) => {
           setTrainingsData(response.data);
         })
@@ -47,7 +47,7 @@ export const Dashboard = () => {
           console.log(error);
         });
     axios
-      .get("http://localhost:3001/client")
+      .get("https://calm-everglades-62292.herokuapp.com/client")
       .then((response) => {
         setClientData(response.data);
         setBoardLoading(false);
