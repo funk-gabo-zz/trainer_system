@@ -12,7 +12,7 @@ export const App = () => (
       <GlobalStyle />
       <Layout>
         <Routes>
-          <Route path='/trainer_system/' element={<Dashboard />} />
+          <Route path='/' element={<Dashboard />} />
           <Route path="list" element={<List />} />
           <Route path="mnt" element={<Mnt />} />
         </Routes>
