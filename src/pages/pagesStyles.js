@@ -17,3 +17,16 @@ export const Section = styled.section`
     padding: 0;
   }
 `;
+
+export const FilterSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
+`
+export const BoardDate = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+`

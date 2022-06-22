@@ -8,6 +8,7 @@ export const BasicTable = ({
   loading,
   setLoading,
   searchValue,
+  clientSearchValue,
   tableType,
 }) => {
   switch (tableType) {
@@ -59,6 +60,14 @@ export const BasicTable = ({
         const searchValueUpper = searchValue.toUpperCase();
         return nameDataUpper.includes(searchValueUpper);
       });
+      let clientUserFilter = []
+      if (clientSearchValue) {
+        clientUserFilter = uftdataFiltler.filter((data) => {
+          return data.client === clientSearchValue;
+        });
+      } else {
+        clientUserFilter = uftdataFiltler
+      }
       return (
         <Table
           scroll={{
@@ -66,7 +75,7 @@ export const BasicTable = ({
           }}
           loading={loading}
           columns={uftcolumns}
-          dataSource={uftdataFiltler}
+          dataSource={clientUserFilter}
           size="small"
         />
       );
@@ -142,10 +151,10 @@ export const BasicTable = ({
       const parseStart = startDate.toString();
       const parseEnd = endDate.toString();
       if (parseStart === parseEnd) {
-        filteredTraining = trainingsData.filter(training => {
+        filteredTraining = trainingsData.filter((training) => {
           const date = new Date(training.date);
-          return date.getMonth() === startDate.getMonth()
-        })
+          return date.getMonth() === startDate.getMonth();
+        });
       } else {
         filteredTraining = trainingsData.filter((training) => {
           const date = new Date(training.date);

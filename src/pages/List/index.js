@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BasicTable } from "../../components/BasicTable";
-import { Main, Section } from "../pagesStyles";
+import { FilterSection, Main, Section } from "../pagesStyles";
 import { Button, DatePicker, Space, Form } from "antd";
 import { FormDrawer } from "../../components/FormDrawer";
 const { RangePicker } = DatePicker;
@@ -22,9 +22,9 @@ export const List = () => {
   return (
     <Main>
       <Section>
-        <Space>
+        <FilterSection>
           <Button onClick={showDrawer} type="primary">
-            Nueva Capacitación
+            Nuevo Servicio
           </Button>
           <Form onFinish={makeFilter} layout="inline">
             <Form.Item name="date" noStyle>
@@ -36,7 +36,7 @@ export const List = () => {
               </Button>
             </Form.Item>
           </Form>
-        </Space>
+        </FilterSection>
         <FormDrawer
           drawerTitle="Nueva Capacitación"
           drawerType="ntf"

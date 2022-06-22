@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { BasicBar } from "../../components/BasicBar";
 import { DonutPie } from "../../components/DonutPie";
 import { Graphs } from "../../components/Graphs";
 import { GraphItem, GraphItemGrid } from "../../components/Graphs/styles";
 import { PointerCount } from "../../components/PointerCount";
 import { Pointers } from "../../components/Pointers";
-import { Main, Section } from "../pagesStyles";
-import "antd/dist/antd.css";
-import { Button, Input, Space, Form, DatePicker } from "antd";
+import { BoardDate, FilterSection, Main, Section } from "../pagesStyles";
+import { Button, Input, Space, Form, DatePicker, Select } from "antd";
 import { BasicTable } from "../../components/BasicTable";
-import axios from "axios";
 import { FormDrawer } from "../../components/FormDrawer";
+import "antd/dist/antd.css";
+
 const { Search } = Input;
 const { RangePicker } = DatePicker;
 
 export const Dashboard = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [clientSearchValue, setClientSearchValue] = useState("");
   const [boardLoading, setBoardLoading] = useState(true);
   const [trainingsData, setTrainingsData] = useState([]);
   const [clientData, setClientData] = useState([]);
@@ -78,7 +80,8 @@ export const Dashboard = () => {
     });
   }
 
-  const clientsTrained = [...new Set(filteredTraining.map((x) => x.client))].length;
+  const clientsTrained = [...new Set(filteredTraining.map((x) => x.client))]
+    .length;
   const totalCleints = clientData.length;
   const countTotalTraining = filteredTraining.length;
   const executedTraining = filteredTraining.filter(
@@ -118,14 +121,16 @@ export const Dashboard = () => {
   return (
     <Main>
       <Section>
-        <Form onFinish={makeFilter} layout="inline">
-          <Form.Item name="date" noStyle>
-            <RangePicker picker="month"/>
-          </Form.Item>
-          <Form.Item>
-            <Button htmlType="submit">🔍</Button>
-          </Form.Item>
-        </Form>
+        <BoardDate>
+          <Form onFinish={makeFilter} layout="inline">
+            <Form.Item name="date" noStyle>
+              <RangePicker picker="month" />
+            </Form.Item>
+            <Form.Item>
+              <Button htmlType="submit">🔍</Button>
+            </Form.Item>
+          </Form>
+        </BoardDate>
         <Pointers>
           <PointerCount
             value={`${clientsTrained}/${totalCleints}`}
@@ -168,7 +173,7 @@ export const Dashboard = () => {
         </Graphs>
       </Section>
       <Section>
-        <Space>
+        <FilterSection>
           <Search
             value={searchValue}
             onChange={(e) => {
@@ -179,14 +184,34 @@ export const Dashboard = () => {
               width: 200,
             }}
           />
+          <Select
+            allowClear
+            showSearch
+            placeholder="Buscar Cliente"
+            optionFilterProp="children"
+            onChange={(e) => {
+              setClientSearchValue(e);
+              console.log(clientSearchValue);
+            }}
+            filterOption={(input, option) =>
+              option.children.toLowerCase().includes(input.toLowerCase())
+            }
+          >
+            {clientData.map((client) => (
+              <Select.Option key={client._id} value={client.name}>
+                {client.name}
+              </Select.Option>
+            ))}
+          </Select>
           <Button type="primary" onClick={showDrawer}>
             Nuevo Usuario
           </Button>
-        </Space>
+        </FilterSection>
         <BasicTable
           loading={loading}
           setLoading={setLoading}
           searchValue={searchValue}
+          clientSearchValue={clientSearchValue}
           tableType="uft"
         />
       </Section>
