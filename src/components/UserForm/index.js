@@ -11,8 +11,11 @@ export const UserForm = ({ setLoading }) => {
       method: "post",
       url: "https://calm-everglades-62292.herokuapp.com/user",
       data: values,
-    });
-    setLoading(true);
+    })
+    .then(response => {
+      response && setLoading(true);
+    })
+    
     formRef.current.resetFields();
   };
 

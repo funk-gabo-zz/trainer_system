@@ -29,9 +29,11 @@ export const TrainingForm = ({ setLoading }) => {
       method: "post",
       url: "https://calm-everglades-62292.herokuapp.com/training",
       data: newTraining,
-    });
-    setLoading(true);
-    formRef.current.resetFields();
+    })
+    .then(response => {
+      response && setLoading(true);
+      formRef.current.resetFields();
+    })
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
