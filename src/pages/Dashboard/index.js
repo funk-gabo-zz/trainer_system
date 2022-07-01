@@ -65,12 +65,17 @@ export const Dashboard = () => {
 
   let filteredTraining = [];
 
-  const parseStart = startDate.toString();
-  const parseEnd = endDate.toString();
-  if (parseStart === parseEnd) {
+  const monthStart = startDate.getMonth();
+  const montheEnd = endDate.getMonth();
+  if (!period.date) {
     filteredTraining = trainingsData.filter((training) => {
       const date = new Date(training.date);
       return date.getYear() === startDate.getYear();
+    });
+  } else if (monthStart === montheEnd) {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
+      return date.getMonth() === startDate.getMonth();
     });
   } else {
     filteredTraining = trainingsData.filter((training) => {

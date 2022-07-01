@@ -148,20 +148,25 @@ export const BasicTable = ({
 
       let filteredTraining = [];
 
-      const parseStart = startDate.toString();
-      const parseEnd = endDate.toString();
-      if (parseStart === parseEnd) {
-        filteredTraining = trainingsData.filter((training) => {
-          const date = new Date(training.date);
-          return date.getYear() === startDate.getYear();
-        });
-      } else {
-        filteredTraining = trainingsData.filter((training) => {
-          const date = new Date(training.date);
+      const monthStart = startDate.getMonth();
+  const montheEnd = endDate.getMonth();
+  if (!period.date) {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
+      return date.getYear() === startDate.getYear();
+    });
+  } else if (monthStart === montheEnd) {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
+      return date.getMonth() === startDate.getMonth();
+    });
+  } else {
+    filteredTraining = trainingsData.filter((training) => {
+      const date = new Date(training.date);
 
-          return date >= startDate && date <= endDate;
-        });
-      }
+      return date >= startDate && date <= endDate;
+    });
+  }
 
       const mttdata = filteredTraining.map((training) => {
         const dateMod = training.date.slice(-24, 10);
