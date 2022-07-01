@@ -70,7 +70,7 @@ export const Dashboard = () => {
   if (parseStart === parseEnd) {
     filteredTraining = trainingsData.filter((training) => {
       const date = new Date(training.date);
-      return date.getMonth() === startDate.getMonth();
+      return date.getYear() === startDate.getYear();
     });
   } else {
     filteredTraining = trainingsData.filter((training) => {
