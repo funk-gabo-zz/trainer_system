@@ -60,13 +60,13 @@ export const BasicTable = ({
         const searchValueUpper = searchValue.toUpperCase();
         return nameDataUpper.includes(searchValueUpper);
       });
-      let clientUserFilter = []
+      let clientUserFilter = [];
       if (clientSearchValue) {
         clientUserFilter = uftdataFiltler.filter((data) => {
           return data.client === clientSearchValue;
         });
       } else {
-        clientUserFilter = uftdataFiltler
+        clientUserFilter = uftdataFiltler;
       }
       return (
         <Table
@@ -149,24 +149,28 @@ export const BasicTable = ({
       let filteredTraining = [];
 
       const monthStart = startDate.getMonth();
-  const montheEnd = endDate.getMonth();
-  if (!period.date) {
-    filteredTraining = trainingsData.filter((training) => {
-      const date = new Date(training.date);
-      return date.getYear() === startDate.getYear();
-    });
-  } else if (monthStart === montheEnd) {
-    filteredTraining = trainingsData.filter((training) => {
-      const date = new Date(training.date);
-      return date.getMonth() === startDate.getMonth();
-    });
-  } else {
-    filteredTraining = trainingsData.filter((training) => {
-      const date = new Date(training.date);
+      const monthEnd = endDate.getMonth();
 
-      return date >= startDate && date <= endDate;
-    });
-  }
+      if (!period.date) {
+        filteredTraining = trainingsData.filter((training) => {
+          const date = new Date(training.date);
+          return date.getYear() === startDate.getYear();
+        });
+      } else if (monthStart === monthEnd) {
+        filteredTraining = trainingsData.filter((training) => {
+          const date = new Date(training.date);
+          return date.getMonth() === startDate.getMonth();
+        });
+      } else {
+        filteredTraining = trainingsData.filter((training) => {
+          const date = new Date(training.date);
+
+          return (
+            date.getMonth() >= startDate.getMonth() &&
+            date.getMonth() <= endDate.getMonth()
+          );
+        });
+      }
 
       const mttdata = filteredTraining.map((training) => {
         const dateMod = training.date.slice(-24, 10);

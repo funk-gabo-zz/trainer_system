@@ -66,13 +66,16 @@ export const Dashboard = () => {
   let filteredTraining = [];
 
   const monthStart = startDate.getMonth();
-  const montheEnd = endDate.getMonth();
+  const monthEnd = endDate.getMonth();
+  console.log(monthStart);
+  console.log(monthEnd);
+
   if (!period.date) {
     filteredTraining = trainingsData.filter((training) => {
       const date = new Date(training.date);
       return date.getYear() === startDate.getYear();
     });
-  } else if (monthStart === montheEnd) {
+  } else if (monthStart === monthEnd) {
     filteredTraining = trainingsData.filter((training) => {
       const date = new Date(training.date);
       return date.getMonth() === startDate.getMonth();
@@ -80,8 +83,10 @@ export const Dashboard = () => {
   } else {
     filteredTraining = trainingsData.filter((training) => {
       const date = new Date(training.date);
-
-      return date >= startDate && date <= endDate;
+      return (
+        date.getMonth() >= startDate.getMonth() &&
+        date.getMonth() <= endDate.getMonth()
+      );
     });
   }
 
